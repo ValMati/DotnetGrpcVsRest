@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option csharp_namespace = "ValMati.Dotnet-grpc-vs-rest.Domain";
+
+package echo;
+
+service Echo {
+  rpc Echo (EchoRequest) returns (byte[]);
+}
+
+message HelloRequest {
+  int32 delay = 1;
+  int32 size = 2;
+}

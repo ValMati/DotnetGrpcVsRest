@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValMati.Dotnet-grpc-vs-rest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValMati.Dotnet-grpc-vs-rest.Domain", "ValMati.Dotnet-grpc-vs-rest.Domain\ValMati.Dotnet-grpc-vs-rest.Domain.csproj", "{BBA12267-CC41-407C-85D7-F97BCCB88DC9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValMati.Dotnet-grpc-vs-rest.GRPC", "ValMati.Dotnet-grpc-vs-rest.GRPC\ValMati.Dotnet-grpc-vs-rest.GRPC.csproj", "{F921E74B-9CC2-434B-8911-80BE1A99EDF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,14 +19,14 @@ Global
 		{8DD8D7CD-EA12-4FD6-86D6-717548770459}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DD8D7CD-EA12-4FD6-86D6-717548770459}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DD8D7CD-EA12-4FD6-86D6-717548770459}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49AF7F00-CFF0-4F42-B981-85B7FCB71EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49AF7F00-CFF0-4F42-B981-85B7FCB71EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49AF7F00-CFF0-4F42-B981-85B7FCB71EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49AF7F00-CFF0-4F42-B981-85B7FCB71EE2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BBA12267-CC41-407C-85D7-F97BCCB88DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BBA12267-CC41-407C-85D7-F97BCCB88DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBA12267-CC41-407C-85D7-F97BCCB88DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBA12267-CC41-407C-85D7-F97BCCB88DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F921E74B-9CC2-434B-8911-80BE1A99EDF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F921E74B-9CC2-434B-8911-80BE1A99EDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F921E74B-9CC2-434B-8911-80BE1A99EDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F921E74B-9CC2-434B-8911-80BE1A99EDF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
