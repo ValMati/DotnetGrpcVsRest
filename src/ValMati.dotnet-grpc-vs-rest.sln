@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValMati.Dotnet-grpc-vs-rest.REST", "ValMati.dotnet-grpc-vs-rest.dotnet31.REST\ValMati.Dotnet-grpc-vs-rest.REST.csproj", "{8DD8D7CD-EA12-4FD6-86D6-717548770459}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValMati.Dotnet-grpc-vs-rest.Controllers", "ValMati.Dotnet-grpc-vs-rest.Controllers\ValMati.Dotnet-grpc-vs-rest.Controllers.csproj", "{49AF7F00-CFF0-4F42-B981-85B7FCB71EE2}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValMati.Dotnet-grpc-vs-rest.Domain", "ValMati.Dotnet-grpc-vs-rest.Domain\ValMati.Dotnet-grpc-vs-rest.Domain.csproj", "{BBA12267-CC41-407C-85D7-F97BCCB88DC9}"
 EndProject
 Global
