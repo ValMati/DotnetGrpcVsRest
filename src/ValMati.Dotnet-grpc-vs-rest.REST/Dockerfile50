@@ -1,0 +1,17 @@
+# Build
+FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine AS build
+WORKDIR /source
+
+COPY . .
+RUN dotnet publish -c release -o /app -f net5.0 ValMati.Dotnet-grpc-vs-rest.REST/ValMati.Dotnet-grpc-vs-rest.REST.csproj
+
+# Generate image
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-alpine
+
+ENV ASPNETCORE_URLS=http://*:9092
+WORKDIR /app
+COPY --from=build /app .
+
+EXPOSE 9092
+ 
+ENTRYPOINT [ "dotnet", "ValMati.Dotnet-grpc-vs-rest.REST.dll" ]
