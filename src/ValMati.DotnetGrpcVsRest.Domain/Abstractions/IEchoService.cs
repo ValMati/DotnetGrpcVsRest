@@ -1,7 +1,7 @@
-﻿namespace ValMati.Dotnet_grpc_vs_rest.Domain.Abstractions
+﻿namespace ValMati.DotnetGrpcVsRest.Domain.Abstractions
 {
     using System.Threading.Tasks;
-    using ValMati.Dotnet_grpc_vs_rest.Domain.Requests;
+    using ValMati.DotnetGrpcVsRest.Domain.Requests;
 
     public interface IEchoService
     {

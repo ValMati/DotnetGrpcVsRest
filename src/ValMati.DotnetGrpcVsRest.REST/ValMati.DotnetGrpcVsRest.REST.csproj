@@ -17,7 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ValMati.Dotnet-grpc-vs-rest.Domain\ValMati.Dotnet-grpc-vs-rest.Domain.csproj" />
+    <ProjectReference Include="..\ValMati.DotnetGrpcVsRest.Domain\ValMati.DotnetGrpcVsRest.Domain.csproj" />
+    <ProjectReference Include="..\ValMati.DotnetGrpcVsRest.REST.Shared\ValMati.DotnetGrpcVsRest.REST.Shared.csproj" />
   </ItemGroup>
 
 </Project>

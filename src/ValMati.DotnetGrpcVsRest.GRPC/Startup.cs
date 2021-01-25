@@ -1,11 +1,12 @@
-﻿namespace ValMati.Dotnet_grpc_vs_rest.GRPC
+﻿namespace ValMati.DotnetGrpcVsRest.GRPC
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
-    using ValMati.Dotnet_grpc_vs_rest.Domain;
+    using ValMati.DotnetGrpcVsRest.Domain.Configurators;
+    using ValMati.DotnetGrpcVsRest.GRPC.GrpcServices;
 
     public class Startup
     {
@@ -14,6 +15,8 @@
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
+
+            services.AddDomainDependencies();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,7 +31,7 @@
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<EchoService>();
+                endpoints.MapGrpcService<GrpcEchoService>();
 
                 endpoints.MapGet("/", async context =>
                 {

@@ -1,10 +1,11 @@
-﻿namespace ValMati.Dotnet_grpc_vs_rest.Controllers
+﻿namespace ValMati.DotnetGrpcVsRest.Controllers
 {
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
-    using ValMati.Dotnet_grpc_vs_rest.Domain.Abstractions;
-    using ValMati.Dotnet_grpc_vs_rest.Domain.Requests;
+    using ValMati.DotnetGrpcVsRest.Domain.Abstractions;
+    using ValMati.DotnetGrpcVsRest.Domain.Requests;
+    using ValMati.DotnetGrpcVsRest.REST.Shared.Requests;
 
     [ApiController]
     [Route("[controller]")]
@@ -22,9 +23,15 @@
         }
 
         [HttpPost]
-        public async Task<ActionResult<byte[]>> GetSimple([FromBody] EchoRequest echoRequest)
+        public async Task<ActionResult<byte[]>> GetSimple([FromBody] RestEchoRequest restEchoRequest)
         {
-            _logger.LogInformation($"Echo with size '{echoRequest.Size}' and delay of {echoRequest.Delay} miliseconds");
+            _logger.LogInformation($"Echo with size '{restEchoRequest.Size}' and delay of {restEchoRequest.Delay} miliseconds");
+
+            var echoRequest = new EchoRequest
+            {
+                Delay = restEchoRequest.Delay,
+                Size = restEchoRequest.Size
+            };
 
             var response = await _echoService.EchoAsync(echoRequest);
 

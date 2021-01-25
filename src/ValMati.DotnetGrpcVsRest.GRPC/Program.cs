@@ -1,4 +1,4 @@
-﻿namespace ValMati.Dotnet_grpc_vs_rest.REST
+﻿namespace ValMati.DotnetGrpcVsRest.GRPC
 {
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Hosting;

@@ -1,7 +1,7 @@
-﻿namespace ValMati.Dotnet_grpc_vs_rest.Domain.Configurators
+﻿namespace ValMati.DotnetGrpcVsRest.Domain.Configurators
 {
     using Microsoft.Extensions.DependencyInjection;
-    using ValMati.Dotnet_grpc_vs_rest.Domain.Abstractions;
+    using ValMati.DotnetGrpcVsRest.Domain.Abstractions;
 
     public static class DependenciesConfigurator
     {

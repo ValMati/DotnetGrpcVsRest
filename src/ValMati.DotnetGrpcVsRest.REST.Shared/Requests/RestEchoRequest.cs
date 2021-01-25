@@ -1,6 +1,6 @@
-﻿namespace ValMati.Dotnet_grpc_vs_rest.Domain.Requests
+﻿namespace ValMati.DotnetGrpcVsRest.REST.Shared.Requests
 {
-    public class EchoRequest
+    public class RestEchoRequest
     {
         public int Delay { get; set; }
 

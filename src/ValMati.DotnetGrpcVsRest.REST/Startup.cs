@@ -1,11 +1,11 @@
-﻿namespace ValMati.Dotnet_grpc_vs_rest.REST
+﻿namespace ValMati.DotnetGrpcVsRest.REST
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
-    using ValMati.Dotnet_grpc_vs_rest.Domain.Configurators;
+    using ValMati.DotnetGrpcVsRest.Domain.Configurators;
 
     public class Startup
     {
