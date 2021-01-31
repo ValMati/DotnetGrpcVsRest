@@ -25,11 +25,10 @@
         [HttpPost]
         public async Task<ActionResult<byte[]>> GetSimple([FromBody] RestEchoRequest restEchoRequest)
         {
-            _logger.LogInformation($"Echo with size '{restEchoRequest.Size}' and delay of {restEchoRequest.Delay} miliseconds");
+            _logger.LogInformation($"Echo with size '{restEchoRequest.Size}'");
 
             var echoRequest = new EchoRequest
             {
-                Delay = restEchoRequest.Delay,
                 Size = restEchoRequest.Size
             };
 

@@ -6,6 +6,7 @@
     using Microsoft.Extensions.Logging;
     using ValMati.DotnetGrpcVsRest.Domain.Abstractions;
     using ValMati.DotnetGrpcVsRest.Domain.Requests;
+    using ValMati.DotnetGrpcVsRest.GRPC.Shared;
 
     public class GrpcEchoService : GrpcEcho.GrpcEchoBase
     {
@@ -20,13 +21,12 @@
             _echoService = echoService;
         }
 
-        public override async Task<GrpcEchoResponse> EchoAsync(GrpcEchoRequest request, ServerCallContext context)
+        public override async Task<GrpcEchoResponse> Echo(GrpcEchoRequest request, ServerCallContext context)
         {
-            _logger.LogInformation($"Echo with size '{request.Size}' and delay of {request.Delay} miliseconds");
+            _logger.LogInformation($"Echo with size '{request.Size}'");
 
             var echoRequest = new EchoRequest
             {
-                Delay = request.Delay,
                 Size = request.Size
             };
 

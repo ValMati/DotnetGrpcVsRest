@@ -15,11 +15,6 @@
 
         private void ValidateRequest(EchoRequest echoRequest)
         {
-            if (echoRequest.Delay < 0)
-            {
-                throw new System.ArgumentException($"{nameof(EchoRequest.Delay)} should be greater or equal than zero");
-            }
-
             if (echoRequest.Size < 0)
             {
                 throw new System.ArgumentException($"{nameof(EchoRequest.Size)} should be greater or equal than zero");
@@ -28,9 +23,9 @@
 
         private async Task<byte[]> EchoInternalAsync(EchoRequest echoRequest)
         {
-            await Task.Delay(echoRequest.Delay);
+            var result = new byte[echoRequest.Size];
 
-            return new byte[echoRequest.Size];
+            return await Task.FromResult(result);
         }
     }
 }

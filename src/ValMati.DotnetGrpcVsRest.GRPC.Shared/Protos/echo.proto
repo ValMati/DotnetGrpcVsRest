@@ -1,16 +1,15 @@
 syntax = "proto3";
 
-option csharp_namespace = "ValMati.DotnetGrpcVsRest.GRPC.GrpcServices";
+option csharp_namespace = "ValMati.DotnetGrpcVsRest.GRPC.Shared";
 
 package gRPCEcho;
 
 service GrpcEcho {
-  rpc EchoAsync (GrpcEchoRequest) returns (GrpcEchoResponse);
+  rpc Echo (GrpcEchoRequest) returns (GrpcEchoResponse);
 }
 
 message GrpcEchoRequest {
-  int32 delay = 1;
-  int32 size = 2;
+  int32 size = 1;
 }
 
 message GrpcEchoResponse {
