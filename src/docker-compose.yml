@@ -10,13 +10,13 @@ services:
     ports:
       - "9091:9091"
 
-  rest50:
-    build:
-      context: .
-      dockerfile: ValMati.DotnetGrpcVsRest.REST/Dockerfile50
-    image: valmati/dotnet-grpc-vs-rest.rest:5.0
-    ports:
-      - "9092:9092"
+#  rest50:
+#    build:
+#      context: .
+#      dockerfile: ValMati.DotnetGrpcVsRest.REST/Dockerfile50
+#    image: valmati/dotnet-grpc-vs-rest.rest:5.0
+#    ports:
+#      - "9092:9092"
 
   grpc31:
     build:
@@ -26,10 +26,19 @@ services:
     ports:
       - "9093:9093"
 
-  grpc50:
+#  grpc50:
+#    build:
+#      context: .
+#      dockerfile: ValMati.DotnetGrpcVsRest.GRPC/Dockerfile50
+#    image: valmati/dotnet-grpc-vs-rest.grpc:5.0
+#    ports:
+#      - "9094:9094"
+
+  benchmark31:
     build:
       context: .
-      dockerfile: ValMati.DotnetGrpcVsRest.GRPC/Dockerfile50
-    image: valmati/dotnet-grpc-vs-rest.grpc:5.0
-    ports:
-      - "9094:9094"
+      dockerfile: ValMati.DotnetGrpcVsRest.Benchmark/Dockerfile31
+    image: valmati/dotnet-grpc-vs-rest.benchmark:3.1
+    depends_on:
+      - rest31
+      - grpc31

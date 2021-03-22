@@ -1,0 +1,7 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0
+WORKDIR /source
+
+COPY . .
+RUN dotnet publish -c release -o bin -f net5.0 ValMati.DotnetGrpcVsRest.Benchmark/ValMati.DotnetGrpcVsRest.Benchmark.csproj
+ 
+ENTRYPOINT [ "dotnet", "bin/ValMati.DotnetGrpcVsRest.Benchmark.dll" ]

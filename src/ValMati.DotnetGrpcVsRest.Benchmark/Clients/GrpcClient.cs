@@ -1,5 +1,6 @@
 ﻿namespace ValMati.DotnetGrpcVsRest.Benchmark.Clients
 {
+    using System;
     using System.Threading.Tasks;
     using Grpc.Net.Client;
     using ValMati.DotnetGrpcVsRest.GRPC.Shared;
@@ -10,6 +11,8 @@
 
         public GrpcClient()
         {
+            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+
             var channel = GrpcChannel.ForAddress(
                                         Urls.GRPCURL,
                                         new GrpcChannelOptions { MaxReceiveMessageSize = null });
